@@ -1,30 +1,31 @@
-# 🤖 Azure AI Agents Orchestration Playbook
+# Azure AI Agents Orchestration Playbook
 
-**A comprehensive collection of tutorials for building production-ready orchestrated Azure AI Agents**
+A comprehensive collection of tutorials for building production-ready Azure AI Agents, from basic conversations to complex multi-agent orchestration systems with voice capabilities and external API integrations.
 
-Learn to create sophisticated AI agents using Azure AI services, from basic conversations to complex multi-agent orchestration systems with voice capabilities and external API integrations.
+> **Note:** Check out our **animated** PowerPoint presentation for an overview: [Azure AI Agents Orchestration Playbook Presentation](./Azure%20AI%20Agent%20Orchestration.pptx)
 
+## Tutorial Structure
 
-> **Note:** Please check our **animated** Powerpoint presentation for an overview of the playbook: [Azure AI Agents Orchestration Playbook Presentation](./Azure%20AI%20Agent%20Orchestration.pptx)
-
-
-## 📚 Tutorial Structure
-
-### 🎯 **Foundational Concepts**
+### Foundational Concepts
 - **[01-agent-basics](01-agent-basics/)** - Core Azure AI Agents fundamentals using Foundry SDK and Semantic Kernel
 - **[02-agent-custom-functions](02-agent-custom-functions/)** - Extend agent capabilities with custom functions and plugins
 
-### 🎭 **Multi-Agent Systems**
+### Multi-Agent Systems
 - **[03-orchestrated-agents](03-orchestrated-agents/)** - Coordinate multiple agents for complex workflows
 - **[04-orchestrated-agents-with-tools](04-orchestrated-agents-with-tools/)** - Integrate external APIs and Azure Logic Apps
 - **[05-orchestrated-agents-with-custom-openapi-tools](05-orchestrated-agents-with-custom-openapi-tools/)** - Connect agents to custom FastAPI services
 - **[06-magentic-one-orchestration](06-magentic-one-orchestration/)** - Advanced orchestration with Magentic-One framework
 
-### 🎤 **Advanced Capabilities**
+### Advanced Capabilities
 - **[07-voice-orchestration](07-voice-orchestration/)** - Voice-enabled agents with real-time audio processing
-- **[08-advanced-orchestrated-agents](08-advanced-orchestrated-agents/)** - Enterprise patterns and production systems *(Coming Soon)*
+- **[08-agent-routing](08-agent-routing/)** - Hierarchical routing design pattern for multi-agent systems
 
-## 🚀 Getting Started
+
+![Agent Router](08-agent-routing/images/router.gif)
+
+
+
+## Getting Started
 
 ### Prerequisites
 - Azure subscription with AI services
@@ -46,9 +47,9 @@ Learn to create sophisticated AI agents using Azure AI services, from basic conv
    - Begin with [01-agent-basics](01-agent-basics/) for fundamentals
    - Progress through tutorials in numerical order
 
-## 🎯 Learning Path
+## Learning Path
 
-**Recommended progression for maximum learning:**
+**Recommended progression:**
 
 1. **Basics** → Learn core Azure AI Agents concepts and development patterns
 2. **Functions** → Add custom capabilities to extend agent functionality  
@@ -58,7 +59,7 @@ Learn to create sophisticated AI agents using Azure AI services, from basic conv
 6. **Advanced** → Master sophisticated orchestration frameworks
 7. **Voice** → Add voice interaction capabilities
 
-## 🛠️ What You'll Build
+## What You'll Build
 
 By completing this playbook, you'll master:
 

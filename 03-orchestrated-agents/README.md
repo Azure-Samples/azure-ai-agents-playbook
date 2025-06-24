@@ -1,88 +1,55 @@
-# 🎭 Orchestrated Agents - Multi-Agent Coordination
+# Orchestrated Agents
 
-Welcome to the world of multi-agent orchestration! This folder contains comprehensive tutorials that show you how to coordinate multiple Azure AI agents working together to solve complex problems through sophisticated collaboration patterns.
+Learn how to coordinate multiple agents to solve complex problems. This is where individual agents become a powerful team.
 
-## 📚 What's In This Folder
+## What's In This Folder
 
-### 🔄 [03.1 - Concurrent and Sequential Orchestration Tutorial](03.1-concurrent_and_sequential_orchestration_tutorial.ipynb)
-**Master the art of multi-agent orchestration with Semantic Kernel**
+**[03.1 - Concurrent and Sequential Orchestration](03.1-concurrent_and_sequential_orchestration_tutorial.ipynb)**
+Master different orchestration patterns using Semantic Kernel. Build specialized agent teams that work in pipelines or in parallel to handle complex tasks.
 
-Learn advanced coordination patterns with specialized agent teams:
-- 🎯 Understanding orchestration patterns and when to use them
-- 🔄 Sequential orchestration for pipeline workflows (Agent A → Agent B → Agent C)
-- ⚡ Concurrent orchestration for parallel processing (A + B + C → Combine)
-- 🏗️ Creating specialized agents with domain-specific plugins
-- 📊 Performance comparison between orchestration patterns
-- 🛠️ Advanced Semantic Kernel orchestration features
-
-**Perfect for**: Developers who want to build sophisticated multi-agent systems that can handle complex workflows through coordinated agent collaboration.
-
-
-#### Orchestration Patterns
-- **Sequential Orchestration**: Agents work in a pipeline, passing results from one to the next.
+**Sequential Orchestration**: Agents work in a pipeline (Agent A → Agent B → Agent C)
 ![Sequential Orchestration](images/sequential_orchestration.gif)
 
-- **Concurrent Orchestration**: Agents work in parallel, combining results at the end.
+**Concurrent Orchestration**: Agents work in parallel (A + B + C → Combine)
 ![Concurrent Orchestration](images/concurrent_orchestration.gif)
 
-
-
-### 🤝 [03.2 - Connected Agents Tutorial](03.2-connected_agents_tutorial.ipynb)
-**Learn agent-to-agent communication and hybrid orchestration approaches**
-
-Explore different approaches to agent connectivity and collaboration:
-- 🔗 Azure AI Foundry SDK connected agents using ConnectedAgentTool
-- 🔌 Semantic Kernel AzureAIAgent plugins for hybrid workflows
-- 🎯 Agent specialization and task delegation patterns
-- 🔄 Comparison between direct connection vs plugin wrapping
-- 🚀 Hybrid workflows combining both SDK approaches
-- 💡 Best practices for agent communication architectures
-
-**Perfect for**: Developers who want to understand different agent connection patterns and build systems that leverage both Azure AI Foundry and Semantic Kernel capabilities.
+**[03.2 - Connected Agents](03.2-connected_agents_tutorial.ipynb)**
+Learn different approaches to agent communication. Compare Azure AI Foundry's ConnectedAgentTool with Semantic Kernel's AzureAIAgent plugins.
 
 ![Connected Agents](images/connected_agents.gif)
 
+## Learning Path
 
-## 🎯 Learning Path
+1. **Start with 03.1** - Master orchestration patterns with specialized teams
+2. **Move to 03.2** - Learn agent connectivity approaches
 
-We recommend following the tutorials in this order:
+**Prerequisites**: Complete [01-agent-basics](../01-agent-basics/) and [02-agent-custom-functions](../02-agent-custom-functions/).
 
-1. **Start with 03.1** - Master orchestration patterns with specialized agent teams
-2. **Advance to 03.2** - Learn agent connectivity and hybrid approaches
-
-**Prerequisites**: Complete the [01-agent-basics](../01-agent-basics/) and [02-agent-custom-functions](../02-agent-custom-functions/) tutorials first to understand core concepts and function integration.
-
-## 📋 Prerequisites
-
-Before starting these tutorials, ensure you have:
+## Prerequisites
 
 ### Previous Knowledge
-- ✅ Completed [01-agent-basics](../01-agent-basics/) tutorials
-- ✅ Completed [02-agent-custom-functions](../02-agent-custom-functions/) tutorials
-- ✅ Understanding of Azure AI Agents and custom functions/plugins
-- ✅ Basic knowledge of async/await patterns in Python
+- Complete [01-agent-basics](../01-agent-basics/) and [02-agent-custom-functions](../02-agent-custom-functions/) tutorials
+- Understanding of async/await patterns in Python
 
 ### Azure Resources
-- ✅ Azure subscription
-- ✅ Azure AI Foundry project
-- ✅ Deployed AI model (GPT-4, GPT-3.5-turbo, etc.)
-- ✅ Azure OpenAI resource (for Semantic Kernel scenarios)
+- Azure subscription
+- Azure AI Foundry project
+- Deployed AI model (GPT-4, GPT-3.5-turbo, etc.)
+- Azure OpenAI resource (for Semantic Kernel scenarios)
 
 ### Environment Setup
-- ✅ Python 3.8+ installed
-- ✅ Jupyter Notebook or VS Code with notebook support
-- ✅ Azure CLI (optional, for authentication)
+- Python 3.8+
+- Jupyter Notebook or VS Code
 
 ### Environment Variables
-Configure your Azure AI services by filling in the `.env` file at the project root level:
+Configure your Azure AI services in the `.env` file at the project root:
 
 ```bash
 # Navigate to the project root and edit the .env file
 cd ../../  # Go to azure-ai-agents-playbook root
-# Edit .env file with your Azure AI configuration
 ```
 
-The `.env` file should contain your Azure AI project details:
+Update the `.env` file with your Azure AI project details:
 ```properties
 # Required for all tutorials
 PROJECT_ENDPOINT="https://your-foundry-resource.services.ai.azure.com/api/projects/your-project-name"
@@ -96,108 +63,52 @@ AZURE_OPENAI_DEPLOYMENT_NAME="your-deployment-name"
 AZURE_OPENAI_API_VERSION="2024-12-01-preview"
 
 # Optional: For advanced scenarios
-REASONING_MODEL_DEPLOYMENT_NAME="your-reasoning-model"
 AZURE_SUBSCRIPTION_ID="your-subscription-id"
 ```
 
-💡 **Tip**: The `.env` file is already present in the project root with example values. Simply update it with your Azure AI project details.
+**Tip**: The `.env` file already exists in the project root with example values - just update it with your details.
 
 ### Required Packages
-Each tutorial will install its required packages, but you can install them all upfront:
+Install the packages you need:
 
 ```bash
 pip install azure-ai-agents azure-identity semantic-kernel python-dotenv
 ```
 
-## 🔑 Key Concepts Covered
+## What You'll Learn
 
-### 🎭 **Multi-Agent Orchestration**
+### Orchestration Patterns
 
-**What orchestration enables:**
-- 🎯 **Specialization**: Each agent excels in specific domains
-- ⚡ **Parallel Processing**: Multiple agents work simultaneously  
-- 📈 **Better Results**: Domain experts produce higher quality outputs
-- 🔄 **Scalability**: Add more agents as needed
-- 💪 **Resilience**: If one agent fails, others continue
+**Sequential Orchestration (Pipeline)**
+- Flow: Agent A → Agent B → Agent C
+- Best for: Document processing, analysis workflows, step-by-step procedures
+- Example: Research Agent → Analytics Agent → Content Agent
 
-### 🔄 **Orchestration Patterns**
+**Concurrent Orchestration (Parallel)**
+- Flow: Agent A + Agent B + Agent C → Combine Results
+- Best for: Independent tasks, multi-source research, parallel processing
+- Example: Multiple research agents gathering different data sources
 
-#### Sequential Orchestration (Pipeline)
-- **Flow**: Agent A → Agent B → Agent C
-- **Use Cases**: Document processing, analysis workflows, step-by-step procedures
-- **Benefits**: Quality control, context building, dependent task chains
-- **Example**: Research Agent → Analytics Agent → Content Agent
+**Hybrid Patterns**
+- Mix of sequential and concurrent patterns for complex workflows
 
-#### Concurrent Orchestration (Parallel)
-- **Flow**: Agent A + Agent B + Agent C → Combine Results
-- **Use Cases**: Independent tasks, multi-source research, parallel processing
-- **Benefits**: Speed, efficiency, diverse perspectives
-- **Example**: Multiple research agents gathering different data sources
+### Agent Connectivity
 
-#### Hybrid Patterns
-- **Flow**: Mix of sequential and concurrent patterns
-- **Use Cases**: Complex workflows with both dependent and independent tasks
-- **Benefits**: Optimal performance and quality for complex scenarios
+**Connected Agents (Foundry SDK)**
+- Use ConnectedAgentTool for agent-to-agent communication
+- Direct delegation and simple coordination
 
-### 🤝 **Agent Connectivity Approaches**
+**AzureAI Plugins (Semantic Kernel)**
+- Wrap Azure AI agents as Semantic Kernel plugins
+- Rich orchestration features and advanced patterns
 
-#### Connected Agents (Foundry SDK)
-- **Method**: `ConnectedAgentTool` for agent-to-agent communication
-- **Pattern**: Agent calls other agents as tools
-- **Benefits**: Direct delegation, simple coordination, built-in tool management
-- **Use Cases**: Task delegation, specialized function calls
+### What You'll Build
+- Research + Analytics + Content Pipeline (sequential workflow)
+- Multi-Perspective Analysis System (concurrent agents)
+- Specialized Agent Network (domain experts working together)
 
-#### AzureAI Plugins (Semantic Kernel)
-- **Method**: Wrap Azure AI agents as Semantic Kernel plugins
-- **Pattern**: Hybrid SK orchestration with Azure AI power
-- **Benefits**: Rich orchestration features, type safety, advanced patterns
-- **Use Cases**: Complex workflows, enterprise scenarios, hybrid architectures
+## Next Steps
 
-### 🏗️ **Advanced Architecture Patterns**
-
-- **Agent Specialization**: Creating domain-expert agents
-- **Plugin Libraries**: Reusable agent capabilities
-- **Workflow Optimization**: Performance tuning and pattern selection
-- **Error Handling**: Resilient multi-agent systems
-- **Resource Management**: Efficient agent lifecycle management
-
-## 🏗️ What You'll Build
-
-By the end of these tutorials, you'll have built:
-
-### 🎭 **Sophisticated Agent Teams**
-1. **Research + Analytics + Content Pipeline** - Sequential workflow for comprehensive analysis
-2. **Multi-Perspective Analysis System** - Concurrent agents providing diverse insights
-3. **Specialized Agent Network** - Domain experts working together
-4. **Hybrid Orchestration Systems** - Combining multiple patterns for optimal results
-
-### 🔄 **Advanced Orchestration Patterns**
-1. **Pipeline Workflows** - Step-by-step agent processing chains
-2. **Parallel Processing** - Simultaneous multi-agent execution
-3. **Dynamic Coordination** - Adaptive workflow routing
-4. **Error-Resilient Systems** - Graceful failure handling and recovery
-
-### 🤝 **Agent Communication Systems**
-1. **Tool-Based Delegation** - Agents calling other agents as tools
-2. **Plugin Integration** - Wrapping agents as reusable plugins
-3. **Hybrid Architectures** - Combining Foundry SDK and Semantic Kernel
-4. **Enterprise Patterns** - Production-ready agent coordination
-
-##  Additional Resources
-
-- [Semantic Kernel Orchestration Documentation](https://learn.microsoft.com/semantic-kernel/agents/)
-- [Azure AI Agents Connected Tools Documentation](https://docs.microsoft.com/azure/ai-services/agents/tools/)
-- [Multi-Agent Systems Design Patterns](https://docs.microsoft.com/azure/ai-services/patterns/)
-- [Azure AI Foundry Orchestration Guide](https://learn.microsoft.com/en-us/azure/ai-foundry/)
-
-## 🎯 Next Steps
-
-After mastering orchestrated agents, explore:
-
-- **[04-orchestrated-agents-with-tools](../04-orchestrated-agents-with-tools/)** - Adding external tools and APIs to orchestrated workflows
-- **[05-orchestrated-agents-with-custom-openapi-tools](../05-orchestrated-agents-with-custom-openapi-tools/)** - Building custom API integrations for agent teams
-- **[06-magentic-one-orchestration](../06-magentic-one-orchestration/)** - Advanced multi-agent orchestration patterns
-
----
-
-🎉 **Ready to orchestrate sophisticated agent teams?** Start with sequential orchestration patterns and progress to advanced concurrent and hybrid workflows to build truly intelligent multi-agent systems!
+After mastering orchestration:
+- [04-orchestrated-agents-with-tools](../04-orchestrated-agents-with-tools/) - External API integration
+- [05-orchestrated-agents-with-custom-openapi-tools](../05-orchestrated-agents-with-custom-openapi-tools/) - Custom API services
