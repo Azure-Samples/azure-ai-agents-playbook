@@ -1,0 +1,79 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Frankfurter Exchange Rates API",
+    "description": "Returns the latest foreign exchange reference rates.",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.frankfurter.dev"
+    }
+  ],
+  "paths": {
+    "/v1/latest": {
+      "get": {
+        "summary": "Latest Exchange Rates",
+        "description": "Returns the latest exchange rates relative to the base currency.",
+        "operationId": "get-latest-rates",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "base",
+            "schema": {
+              "type": "string",
+              "example": "USD"
+            },
+            "description": "The base currency (e.g., USD, EUR)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "amount": 1,
+                  "base": "USD",
+                  "date": "2025-05-07",
+                  "rates": {
+                    "AUD": 1.5452,
+                    "BGN": 1.7217,
+                    "BRL": 5.701,
+                    "CAD": 1.3797,
+                    "CHF": 0.82386,
+                    "CNY": 7.2253,
+                    "CZK": 21.94,
+                    "DKK": 6.5682,
+                    "EUR": 0.88028,
+                    "GBP": 0.74921,
+                    "HKD": 7.7587,
+                    "HUF": 355.7,
+                    "IDR": 16517,
+                    "ILS": 3.5842,
+                    "INR": 84.76,
+                    "ISK": 128.79,
+                    "JPY": 143.39,
+                    "KRW": 1391.15,
+                    "MXN": 19.6312,
+                    "MYR": 4.239,
+                    "NOK": 10.2742,
+                    "NZD": 1.6707,
+                    "PHP": 55.36,
+                    "PLN": 3.7635,
+                    "RON": 4.4974,
+                    "SEK": 9.5977,
+                    "SGD": 1.2914,
+                    "THB": 32.7,
+                    "TRY": 38.643,
+                    "ZAR": 18.2887
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

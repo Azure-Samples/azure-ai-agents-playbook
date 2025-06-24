@@ -1,0 +1,3 @@
+name: fast-aci-deploy
+metadata:
+  template: fast-aci-deploy@0.0.1

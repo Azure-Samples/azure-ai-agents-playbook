@@ -1,0 +1,16 @@
+# Audio processing
+numpy>=1.21.0
+sounddevice>=0.4.6
+
+# WebSocket communication
+websockets>=12.0
+
+# Azure authentication and credentials
+azure-identity>=1.15.0
+azure-core>=1.29.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Type checking (for development)
+typing-extensions>=4.5.0

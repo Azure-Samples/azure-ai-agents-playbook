@@ -1,0 +1,38 @@
+[project]
+name = "playbook" 
+version = "0.1.0"
+description = "Azure AI Agents Playbook" 
+dependencies = [
+    "semantic-kernel",
+    "requests",
+    "notebook",
+    "ipykernel",
+    "pandas",
+    "openai",
+    "python-dotenv",
+    "pydantic",
+    "rich",
+    "tenacity",
+    "pillow",
+    "click",
+    "asyncclick",
+    "tiktoken",
+    "fastmcp",
+    "chainlit",
+    "azure-ai-projects",
+    "azure-ai-agents",
+    "azure-core",    
+    "azure-identity",
+    "azure-mgmt-logic",
+    "azure-monitor-opentelemetry",
+    "opentelemetry-sdk",
+    "azure-core-tracing-opentelemetry",
+    "opentelemetry-exporter-otlp"
+]
+
+[project.optional-dependencies]
+dev = [
+    # Add development dependencies here, e.g., "pytest"
+
+]
+
