@@ -4,7 +4,7 @@
 
   "features": {},
 
-  "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "pip install -r requirements.txt && [ -f .env.sample ] && cp -n .env.sample .env || true",
   "postAttachCommand": "echo '\\n✅ Dev container ready – remember to fill in .env before running the samples.\\n'",
 
   "customizations": {
@@ -12,10 +12,10 @@
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-toolsai.jupyter"  
+        "ms-toolsai.jupyter"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "python"
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   },

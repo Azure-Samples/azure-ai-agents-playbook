@@ -25,3 +25,4 @@ azure-monitor-opentelemetry
 opentelemetry-sdk
 azure-core-tracing-opentelemetry
 opentelemetry-exporter-otlp
+jupyter
