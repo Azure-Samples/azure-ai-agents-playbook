@@ -47,6 +47,8 @@ A comprehensive collection of tutorials for building production-ready Azure AI A
    - Begin with [01-agent-basics](01-agent-basics/) for fundamentals
    - Progress through tutorials in numerical order
 
+For detailed instructions, please follow the step by step guide [here](LOCAL_CONFIG.MD).
+
 ## Learning Path
 
 **Recommended progression:**
