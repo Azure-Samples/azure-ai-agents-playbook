@@ -31,7 +31,7 @@ A comprehensive collection of tutorials for building production-ready Azure AI A
 - Azure subscription with AI services
 - Azure AI Foundry project with deployed models
 - Python 3.8+ with Jupyter support
-
+ 
 ### Quick Setup
 1. **Clone the repository**
    ```bash
@@ -47,7 +47,7 @@ A comprehensive collection of tutorials for building production-ready Azure AI A
    - Begin with [01-agent-basics](01-agent-basics/) for fundamentals
    - Progress through tutorials in numerical order
 
-For detailed instructions, please follow the step by step guide [here](LOCAL_CONFIG.MD).
+For detailed instructions, please follow the step by step guide [here](LOCAL_CONFIG.MD) .
 
 ## Learning Path
 

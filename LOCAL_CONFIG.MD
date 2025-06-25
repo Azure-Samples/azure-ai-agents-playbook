@@ -60,12 +60,12 @@ In your Azure AI Foundry resource:
    - `o1`
    - `o3-mini`
 4. Wait for all model deployments to finish before continuing.
-
+ 
 ---
 
 # ⚙️ Local Environment Setup Guide for Workshop
 
-Follow these step-by-step instructions to get your local development environment ready for the workshop! 🚀
+Follow these step-by-step instructions to get your local development environment ready for the workshop!  🚀
 
 ---
 
