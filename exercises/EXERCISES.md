@@ -50,12 +50,9 @@ Before starting these exercises, ensure you have:
 
 **Requirements**:
 1. Get free Vatnage API Key from [here](https://www.alphavantage.co/support/#api-key)
-1. Create an agent specialized in stock market data
-2. Add functions for:
-    - Get current stock prices
-    - Get stock price history
-    - Calculate stock performance metrics
-3. Test with voice-style prompts like:
+2. Create an agent specialized in stock market data
+3. Use the already provided Alpha Vantage OpenAPI JSON file to register the tool
+4. Test with voice-style prompts like:
     - "What's the current price of Apple stock?"
     - "Show me Microsoft's stock performance this week"
     - "Compare Tesla and Ford stock prices"
