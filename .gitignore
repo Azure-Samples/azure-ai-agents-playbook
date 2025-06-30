@@ -175,3 +175,4 @@ cython_debug/
 do_not_commit/
 xtest.*
 scenarios.md
+sk-foundry-agents.ipynb

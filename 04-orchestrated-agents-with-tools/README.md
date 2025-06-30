@@ -44,20 +44,52 @@ Integrate Azure Logic Apps workflows with AI agent intelligence. Build automated
 - Network access to external APIs (Frankfurter, etc.)
 
 
-### Logic App Setup (for Tutorial 04.3)
+### Set up the Logic App on AzureAdd commentMore actions
 
-Follow the [Logic Apps documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/logic-apps?pivots=portal) to create your workflow.
+Please follow the [documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/logic-apps?pivots=portal) link. The final Logic App should look like this:
 
-**Request Body JSON Schema** for the trigger:
+![logic-app](./images/logic-app.png)
+
+When creating the trigger, please copy and paste the below in the "Request Body JSON Schema" field:
+
 ```json
 {
   "type": "object",
   "properties": {
-    "to": { "type": "string" },
-    "subject": { "type": "string" },
-    "body": { "type": "string" }
+    "to": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    }
   }
 }
+```
+
+The trigger step should look like this:
+
+![logic-app-trigger](./images/logic-app-trigger.png)
+
+
+When creating the second step `Send an email (V2)`, please fill in the required fields as shown below:
+
+![logic-app-send-email](./images/send-email.png)
+
+The `to`, `subject`, and `body` fields will be available to populate from the previous step, which is the trigger. The `to` field will be used to send the email to the user, and the `subject` and `body` fields will be used to populate the email subject and body respectively. To add these fields, right-click on the "To*" field for example, then click on the blue lightning icon, and then select the proper value from the list of available fields. The final step should look like this:
+
+![lightning](./images/lightning.png)
+
+Please note that the `Send an email (V2)` action in the Logic App requires a valid email address to send notifications, and the user has to **manually** go through authentication in the Azure Portal when adding this Step to the workflow. You can use your own email address or create a test email account for this purpose.
+
+The final details in the Jupyter notebook will look like this (or similar):
+
+```python 
+# Logic App details
+logic_app_name = "agent-logic-apps" # Resource name of the Logic App in Azure
+trigger_name = "When_a_HTTP_request_is_received" # Trigger name for the Logic App
 ```
 
 **Note**: The Logic App requires manual authentication in the Azure Portal for email sending capabilities.
