@@ -10,6 +10,9 @@ Add custom functions to your agents using the official Azure AI Agents SDK. Buil
 **[02.2 - Semantic Kernel Plugins](02.2-azure_ai_agents_semantic_kernel_plugins_tutorial.ipynb)**
 Create sophisticated plugins using Semantic Kernel's decorator system. Learn type-safe development and build reusable plugin libraries.
 
+![SK Plugins](images/sk_plugins.gif)
+
+
 ## Learning Path
 
 1. **Start with 02.1** - Learn function basics with the Foundry SDK

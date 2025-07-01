@@ -12,6 +12,8 @@ Connect your agents to the Frankfurter currency exchange API using OpenAPI speci
 **[04.2 - Hybrid OpenAPI + Plugins](04.2-hybrid_openapi_and_plugins_tutorial.ipynb)**
 Build enterprise solutions that combine external APIs with local business logic. Create banking scenarios using local account data and external currency rates.
 
+![SK Plugins](images/sk_plugins.gif)
+
 **[04.3 - Logic Apps Integration](04.3-logic_apps_hybrid_tutorial.ipynb)**
 Integrate Azure Logic Apps workflows with AI agent intelligence. Build automated business processes with email notifications and workflow triggers.
 
