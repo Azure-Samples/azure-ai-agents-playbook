@@ -1,0 +1,53 @@
+{
+  "openapi": "3.1.0",  "info": {
+    "title": "Stock Market Bot",
+    "description": "Comprehensive API for retrieving real-time and historical stock market data, quotes, and financial information using Alpha Vantage services. Supports multiple data functions including current prices, daily time series, and global market quotes.",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://www.alphavantage.co/"
+    }
+  ],
+  "paths": {
+    "/query": {      
+        "get": {
+        "description": "Retrieve comprehensive stock market data including real-time quotes, historical prices, and trading information for any publicly traded stock symbol. This endpoint supports multiple data functions and provides detailed financial metrics.",
+        "operationId": "GetstockpriceId",
+        "parameters": [
+         {
+            "name": "function",
+            "in": "query",
+            "description": "Specifies the type of financial data to retrieve from Alpha Vantage. Common values include: 'GLOBAL_QUOTE' for real-time stock quotes with current price and daily performance metrics, 'TIME_SERIES_DAILY' for historical daily stock prices including open, high, low, close, and volume data, 'TIME_SERIES_INTRADAY' for intraday trading data, and 'OVERVIEW' for comprehensive company fundamental data including financial ratios and key statistics.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+         {
+            "name": "symbol",
+            "in": "query",
+            "description": "The stock ticker symbol for the publicly traded company you want to query. This should be the official trading symbol as listed on major exchanges (e.g., 'AAPL' for Apple Inc., 'MSFT' for Microsoft Corporation, 'GOOGL' for Alphabet Inc., 'TSLA' for Tesla Inc.). The symbol is case-insensitive but typically provided in uppercase format.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+         {
+            "name": "apikey",
+            "in": "query",
+            "description": "Your personal Alpha Vantage API key required for authentication and access to financial data services. You can obtain a free API key by registering at alphavantage.co. For demonstration purposes, you can use 'demo' as the API key, though this provides limited sample data. Production usage requires a valid registered API key to access real-time market data and avoid rate limiting.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}

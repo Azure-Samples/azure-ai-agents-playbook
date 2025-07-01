@@ -50,9 +50,10 @@ Before starting these exercises, ensure you have:
 
 **Requirements**:
 1. Get free Vatnage API Key from [here](https://www.alphavantage.co/support/#api-key)
-2. Create an agent specialized in stock market data
-3. Use the already provided Alpha Vantage OpenAPI JSON file to register the tool
-4. Test with voice-style prompts like:
+2. Add `voice.py` python [file](../07-voice-orchestration/voice.py) from the 07 tutorial to the same folder you're working in
+3. Use the already provided Alpha Vantage [OpenAPI JSON](openapi_files/stock_market.json) file to register the tool
+4. Create an agent specialized in stock market data using the usual way, and then create an `AgentVoice` class instance
+5. Test with voice-style prompts like:
     - "What's the current price of Apple stock?"
     - "Show me Microsoft's stock performance this week"
     - "Compare Tesla and Ford stock prices"
