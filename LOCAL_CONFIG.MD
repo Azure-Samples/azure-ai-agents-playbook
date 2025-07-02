@@ -47,6 +47,10 @@ After the project is deployed:
   > **"Insufficient permissions: Please assign the Azure AI User role to your user principal."**
 - Click the **"Fix me"** button. This assigns the **Azure AI User** role to your account so you can deploy and use models.
 
+### 3️⃣ Create the Grounding with Bing Search resource
+
+### 4️⃣ Create the Logic Apps workflow
+
 ---
 
 ### 🤖 Deploy Models
@@ -63,21 +67,36 @@ In your Azure AI Foundry resource:
  
 ---
 
-# ⚙️ Local Environment Setup Guide for Workshop
+## 💻 Step 2: Install / Update Azure CLI (az) and Azure Developer CLI (azd) 🔧
 
-Follow these step-by-step instructions to get your local development environment ready for the workshop!  🚀
-
----
-
-## 💻 Step 2: Install / Update Azure CLI 🔧
-
-The **Azure CLI (`az`)** is a command-line tool to interact with Azure services from your local terminal.
+1. The **Azure CLI (`az`)** is a command-line tool to interact with Azure services from your local terminal.
+2. `azd` is the **Azure Developer CLI (Command-Line Interface)** — a tool provided by Microsoft to help developers build, deploy, and manage Azure applications more easily.
 
 ---
 
 ## 📦 Step 3: Clone the Repository 🔁
 
+   ```bash
+   git clone https://github.com/Azure-Samples/azure-ai-agents-playbook.git
+   cd azure-ai-agents-playbook
+   ```
+
 ## 🐍 Step 4: Set Up a Virtual Environment & Install Dependencies
 
+### 1. Create conda env
+
+```bash
+conda create -n env_name python=3.11
+conda activate env_name
+```
+
+### 2. pip install requirements
+```bash
+pip install -r requirements.txt
+```
+
 ## 🛠️ Step 5: Configure Local Environment Variables 📁
+
+1. Copy the .env.sample file and rename it as .env
+2. Change it to reflect your keys and endpoints
 
